@@ -27,13 +27,6 @@ In this activity I learnt:
 
 # Website
 
-
-
-# Walkthrough Video 
-
-
-
-
 <img id="styledImage"
     src="book-serch.jpg" width="70%" height="70%"
     alt="book-search"
