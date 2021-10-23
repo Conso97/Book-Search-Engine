@@ -35,8 +35,8 @@ In this activity I learnt:
 
 
 <img id="styledImage"
-    src="models/" width="70%" height="70%"
-    alt=""
+    src="book-serch.jpg" width="70%" height="70%"
+    alt="book-search"
   />
 
 # Contact 

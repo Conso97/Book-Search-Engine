@@ -11,6 +11,7 @@ const resolvers = {
 
   Mutation: {
     createUser: async (parent, { name, email, password }) => {
+      console.log("creating user");
       const user = await User.create({name, email, password});
       const token = signToken(user);
       return {token, user};
@@ -46,7 +47,7 @@ const resolvers = {
       );
     },
 
-    deletebook: async (parent, { userId, book }) => {
+    deleteBook: async (parent, { userId, book }) => {
       return User.findOneAndUpdate(
         { _id: userId },
         { $pull: { books: book } },
