@@ -31,9 +31,11 @@ const SignupForm = () => {
     }
 
     try {
+      alert('sending create user');
       const { data } = await createUser({
         variables: { ...userFormData },
       });
+      alert('user created');
 
       Auth.login(data.createUser.token);
     } catch (e) {

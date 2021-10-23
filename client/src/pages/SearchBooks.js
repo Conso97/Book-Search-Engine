@@ -54,6 +54,7 @@ const SearchBooks = () => {
     }
   };
 
+  const [saveBook, { saveBookError, updatedUser }] = useMutation(SAVE_BOOK);
   // create function to handle saving a book to our database
   const handleSaveBook = async (bookId) => {
     // find the book in `searchedBooks` state by the matching id
@@ -66,9 +67,11 @@ const SearchBooks = () => {
       return false;
     }
 
+    const userId = Auth.getProfile()._id;
+    
     try {
 
-      const { loading, data } = useMutation(SAVE_BOOK, {
+      const { loading, data } = saveBook({
         variables: { userId: userId, book: bookToSave },
       });
 
