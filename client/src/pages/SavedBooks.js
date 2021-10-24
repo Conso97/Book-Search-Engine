@@ -27,6 +27,7 @@ const SavedBooks = () => {
         }
 
         const userId = Auth.getProfile()._id;
+        alert("userId " + userId);
 
         const { loading, user } = queryMe({
           variables: { userId: userId },

@@ -31,7 +31,6 @@ const SignupForm = () => {
     }
 
     try {
-      alert('sending create user');
       const { data } = await createUser({
         variables: { ...userFormData },
       });
