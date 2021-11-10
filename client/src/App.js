@@ -25,6 +25,8 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
   }
 });
 
+alert("server uri " + process.env.SERVER_URI);
+alert("secret " + process.env.JWT_SECRET);
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: process.env.SERVER_URI || 'http://localhost:3001/graphql',
