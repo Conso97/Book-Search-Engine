@@ -3,7 +3,7 @@ const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, "/../.env") });
 
 // set token secret and expiration date
-const secret = process.env.JWT_SECRET;
+const secret = "secret"; //process.env.JWT_SECRET;
 const expiration = '2h';
 
 module.exports = {
