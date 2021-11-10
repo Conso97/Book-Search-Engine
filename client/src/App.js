@@ -20,13 +20,14 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
     console.log('graphQLErrors', graphQLErrors);
   }
   if (networkError) {
+    alert(networkError);
     console.log('networkError', networkError);
   }
 });
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: process.env.SERVER_URI || 'http://localhost:3001/graphql',
+  uri: process.env.SERVER_URI || 'http://localhost:3000/graphql',
   onError: (e) => { console.log(e) },
 });
 
